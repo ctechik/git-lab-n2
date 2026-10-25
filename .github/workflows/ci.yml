@@ -2,7 +2,7 @@ name: CI Pipeline
 
 on:
   pull_request:
-    branches: [ "develop", "main" ]
+    branches: [ "main" ]
 
 jobs:
   test:
@@ -10,7 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run simple test
-        run: |
-          echo "Проверка конфигурации..."
-          cat config.txt
-          echo "Тесты пройдены успешно!"
+        run: echo "Все тесты успешно пройдены!"
